@@ -1,0 +1,85 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#pagina{
+    flex-grow: 1;
+    background-image: url(img/clouds.jpg);
+    background-repeat: repeat-x;
+    background-color: #77c6e7;
+
+    animation: mover_cielo 30s linear infinite;
+}
+
+#dyno{
+    background-image: url(img/ground.png);
+    height: 150px;
+    background-color: #77c6e7;
+    background-position: bottom;
+    background-repeat: repeat-x;
+
+    animation: mover_tierra 20s linear infinite;
+}
+
+footer{
+    background-color: #4e3a2d;
+    color: #fff;
+}
+
+#dyno img{
+    width: 100px;
+    margin-top: -25px;
+    animation: mover_dyno 1s linear infinite;
+}
+
+
+#encabezado{
+    background-color: #ffffffa8;
+}
+
+
+
+@keyframes mover_cielo {
+    
+    0%{
+        background-position: 1000px top;
+    }
+
+    100%{
+        background-position: 0px top;
+    }
+
+}
+
+
+
+@keyframes mover_tierra {
+    
+    0%{
+        background-position: 1000px bottom;
+    }
+
+    100%{
+        background-position: 0px bottom;
+    }
+
+}
+
+
+@keyframes mover_dyno {
+    
+    0%{
+        transform: translateY(-5px);
+    }
+
+    50%{
+        transform: translateY(0px);
+    }
+
+    100%{
+        transform: translateY(-5px);
+    }
+
+}
